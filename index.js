@@ -214,3 +214,5 @@ yargs
     .demandCommand()
     .help()
     .alias('help', 'h').argv;
+
+exports.github = github;

@@ -1,6 +1,6 @@
 {
   "name": "github-reviewers",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "When you create a pull request, you can request or delete a specific group of reviewer on the pull request. You can also see a list of reviews requested.",
   "main": "index.js",
   "author": "Thorsten Scherler",
