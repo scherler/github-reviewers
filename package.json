@@ -1,0 +1,18 @@
+{
+  "name": "github-reviewers",
+  "version": "1.0.0",
+  "description": "When you create a pull request, you can request or delete a specific group of reviewer on the pull request. You can also see a list of reviews requested.",
+  "main": "index.js",
+  "author": "Thorsten Scherler",
+  "license": "MIT",
+  "private": false,
+  "bin": {
+    "github-reviewers" : "index.js"
+  },
+  "dependencies": {
+    "config": "^3.2.4",
+    "lodash": "^4.17.15",
+    "request": "^2.88.0",
+    "yargs": "^15.0.2"
+  }
+}
