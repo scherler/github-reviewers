@@ -1,21 +1,46 @@
 {
   "name": "github-reviewers",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "When you create a pull request, you can request or delete a specific group of reviewer on the pull request. You can also see a list of reviews requested.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "author": "Thorsten Scherler",
   "license": "MIT",
   "private": false,
   "repository": {
     "url": "https://github.com/scherler/github-reviewers"
   },
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --config=jest.config.json"
+  },
   "bin": {
-    "github-reviewers" : "index.js"
+    "github-reviewers": "dist/index.js"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "dependencies": {
     "config": "^3.2.4",
     "lodash": "^4.17.15",
     "request": "^2.88.0",
     "yargs": "^15.0.2"
+  },
+  "devDependencies": {
+    "@types/config": "^0.0.36",
+    "@types/jest": "^22.1.4",
+    "@types/lodash": "^4.14.149",
+    "@types/node": "^9.4.6",
+    "@types/request": "^2.48.4",
+    "@types/yargs": "^13.0.3",
+    "husky": "^3.1.0",
+    "jest": "^22.4.2",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1",
+    "ts-jest": "^22.4.1",
+    "typescript": "^2.7.2"
   }
 }
