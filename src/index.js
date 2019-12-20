@@ -1,4 +1,5 @@
 #! /usr/bin/env node
+// will be copied to dist/
 const config = require("config");
 const yargs = require("yargs");
 const _ = require("lodash");
