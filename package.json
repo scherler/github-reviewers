@@ -1,6 +1,6 @@
 {
   "name": "github-reviewers",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "When you create a pull request, you can request or delete a specific group of reviewer on the pull request. You can also see a list of reviews requested.",
   "main": "dist/github.js",
   "types": "dist/github.d.ts",

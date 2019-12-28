@@ -19,6 +19,8 @@ export const github = ({ owner, repo, pr, GIT_TOKEN }: Igithub) => {
 
   const getReviewers = () => {
     request(options, (error, response, body) => {
+      console.log(`List of current reviewers for 
+https://github.com/${owner}/${repo}/pull/${pr}`);
       if (!error && response.statusCode == 200) {
         const info = JSON.parse(body);
         const reviewers = info.users.map(
@@ -41,6 +43,8 @@ export const github = ({ owner, repo, pr, GIT_TOKEN }: Igithub) => {
         body
       },
       (error, response) => {
+        console.log(`List of requested reviewers for 
+https://github.com/${owner}/${repo}/pull/${pr}`);
         if (!error && response.statusCode == 201) {
           console.log("requested reviewers:", reviewers);
         } else {
@@ -60,6 +64,8 @@ export const github = ({ owner, repo, pr, GIT_TOKEN }: Igithub) => {
         body
       },
       (error, response) => {
+        console.log(`List of deleted reviewers for 
+https://github.com/${owner}/${repo}/pull/${pr}`);
         if (!error && response.statusCode == 200) {
           console.log("removed reviewers:", reviewers);
         } else {
